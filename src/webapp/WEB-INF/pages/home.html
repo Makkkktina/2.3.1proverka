@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Все пользователи</title>
+    <title>All users</title>
     <style>
         body {
             display: flex;
@@ -72,16 +72,16 @@
 </head>
 <body>
 <div class="container">
-    <h1 class="text-center">Таблица пользователей</h1>
+    <h1 class="text-center">Table users</h1>
     <table class="user-table">
         <thead>
         <tr>
             <th>ID</th>
-            <th>Имя</th>
-            <th>Фамилия</th>
-            <th>Возраст</th>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
             <th>Email</th>
-            <th>Действия</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -92,14 +92,14 @@
             <td th:utext="${user.getAge()}"></td>
             <td th:utext="${user.getMail()}"></td>
             <td>
-                <a th:href="'/updateUser?id='+${user.id}" class="action-link">Изменить</a>
-                <a th:href="'/deleteUser?id='+${user.id}" class="action-link">Удалить</a>
+                <a th:href="'/updateUser?id='+${user.id}" class="action-link">Create</a>
+                <a th:href="'/deleteUser?id='+${user.id}" class="action-link">Delate</a>
             </td>
         </tr>
         </tbody>
     </table>
     <div class="text-center">
-        <button class="add-button" onclick="window.location.href = 'creat'">Добавить пользователя</button>
+        <button class="add-button" onclick="window.location.href = 'creat'">Add user</button>
     </div>
 </div>
 </body>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Создание пользователя</title>
+  <title>Sozdanie polzovately</title>
   <style>
     body {
       display: flex;
@@ -57,29 +57,29 @@
 </head>
 <body>
 <div class="container">
-  <h1 class="text-center">Создание пользователя</h1>
+  <h1 class="text-center">Sozdanie polzovately</h1>
   <form th:action="@{/saveUser}" th:object="${userForm}" method="post" class="text-center">
     <div>
-      <label for="name" class="label-text">Введите имя:</label>
+      <label for="name" class="label-text">Name:</label>
       <input type="text" id="name" th:field="*{name}" class="input-field" />
       <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error-message"></p>
     </div>
     <div>
-      <label for="lastName" class="label-text">Введите фамилию:</label>
+      <label for="lastName" class="label-text">Last name:</label>
       <input type="text" id="lastName" th:field="*{lastName}" class="input-field" />
       <p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error-message"></p>
     </div>
     <div>
-      <label for="age" class="label-text">Введите возраст:</label>
+      <label for="age" class="label-text">Age:</label>
       <input type="text" id="age" th:field="*{age}" class="input-field" />
       <p th:if="${#fields.hasErrors('age')}" th:errors="*{age}" class="error-message"></p>
     </div>
     <div>
-      <label for="mail" class="label-text">Введите почту:</label>
+      <label for="mail" class="label-text">Email:</label>
       <input type="text" id="mail" th:field="*{mail}" class="input-field" />
       <p th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}" class="error-message"></p>
     </div>
-    <button type="submit" class="submit-button">Сохранить</button>
+    <button type="submit" class="submit-button">Save</button>
   </form>
 </div>
 </body>
